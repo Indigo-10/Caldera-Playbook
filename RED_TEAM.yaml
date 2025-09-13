@@ -1,0 +1,374 @@
+id: 7325c544-89a1-43f6-9696-2f7dd88b21ba
+name: Red Team 
+description: ---
+objective: 495a9828-cab1-44dd-a0ca-66e58177d8cc
+atomic_ordering:
+- 1632f4c9-f155-4b02-ac31-96871d67775e
+- a1e86936bf58d350d54ae3e087936319
+- 7e1e0a51-0253-46a9-bc0f-9bcc7c1cdfeb
+- 9fe16a57-5023-48b3-9326-9c136d2e0935
+- 7fa80ec4-a828-4d10-b8d7-082048b5194e
+- 3919df10-945e-4472-b5ee-ab541fe4db14
+- 89e4eb83-e31d-4010-babd-659d09d531fb
+- ee2fb20e-ad0b-4759-9b21-48391079b315
+- 04a0b3c3-fac9-41bf-b4f3-a1349a5ba03b
+- 6e75e130-51cf-4da0-9ae8-2e6e25999af8
+- ab2a8ea6-120d-4dd3-a5ce-4013500ca0fc
+- 962b83f7-ba28-4d68-b531-f40919b43642
+- 29b46b3a-f9a2-43cb-b4eb-692db0dabd6b
+- d07792c9-9b6b-45db-8fdf-d6ab9a6938ff
+- 290d6b6b-d822-4f28-bce0-eb6368077a14
+- 5c565cfb-5aa5-4c3e-9ea6-9e51513ac592
+- 7ad9bc1f-0bbf-4aa8-a288-5c7c197f72ec
+- 67ea5458-a990-431c-960a-e8549ab992b6
+- 2cdfdad0-af5c-4743-a3f5-2407d0185238
+- 79aff7d7-b356-4c49-b114-e7f8f4f8138c
+- efad6ed7-e079-401c-84f9-9b1d9a042cb4
+- cb57bf40-c6c4-42fd-813c-31852cd15776
+- 92c42a54-9d41-4c47-8bde-066949c8d9b7
+- 89961056-8cc4-4a1f-8264-3d62dcdd29ec
+- c18eae13-fe67-42da-bf36-ca898b30163e
+- b5595730-013c-41d0-b54c-75e340a2528a
+- 44ec784b-73b1-448b-8897-cdf4620f0492
+- f0ffd237-8ceb-4e03-a1c7-952e33149096
+- b504f990-698a-4636-a5fe-67f4ce65bb90
+- 669389f2-55fd-45a4-8edd-843af9d0aaf2
+- 7d23651f-ae00-4469-99e3-84df9b7052ab
+abilities:
+ 1632f4c9-f155-4b02-ac31-96871d67775e:
+  name:  Level 1 - Stop NFS
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop nfs
+ a1e86936bf58d350d54ae3e087936319:
+  name:  Level 1 - Stop DNS
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop bind9
+ 7e1e0a51-0253-46a9-bc0f-9bcc7c1cdfeb:
+  name:  Level 1 - Stop WIkiJS
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo docker stop ubuntu-wiki-1
+ 9fe16a57-5023-48b3-9326-9c136d2e0935:
+  name:  Level 1 - Stop FTP
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop vsftpd
+ 7fa80ec4-a828-4d10-b8d7-082048b5194e:
+  name:  Level 1 - Stop SSH
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop ssh
+ 3919df10-945e-4472-b5ee-ab541fe4db14:
+  name:  Level 1 - Stop MySQL
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop mysql
+ 89e4eb83-e31d-4010-babd-659d09d531fb:
+  name:  Level 1 - Stop VNC (Linux)
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop vncserver
+ ee2fb20e-ad0b-4759-9b21-48391079b315:
+  name:  Level 1 - Stop Silkroad
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop silkroad
+ 04a0b3c3-fac9-41bf-b4f3-a1349a5ba03b:
+  name:  Level 1 - Stop Gitea
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop gitea
+ 6e75e130-51cf-4da0-9ae8-2e6e25999af8:
+  name:  Level 1 - Stop Mailserver
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo docker stop mailserver
+ ab2a8ea6-120d-4dd3-a5ce-4013500ca0fc:
+  name:  Level 1 - Stop Roundcube
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo docker stop roundcube
+ 962b83f7-ba28-4d68-b531-f40919b43642:
+  name:  Level 1 - Stop SSHD (rowboat)
+  tactic:  impact
+  technique_name:  "Service Stop"
+  technique_id:  T1489
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sudo systemctl stop sshd
+ 29b46b3a-f9a2-43cb-b4eb-692db0dabd6b:
+  name:  Level 2 - Change SSH Port 
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/^#\?Port .*/Port 2222/' /etc/ssh/sshd_config && systemctl restart ssh
+       
+ d07792c9-9b6b-45db-8fdf-d6ab9a6938ff:
+  name:  Level 2 - Change DNS Port (Poopdeck)
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/^OPTIONS.*/OPTIONS="-u bind -p 5300"/' /etc/default/bind9 && systemctl restart bind9
+       
+ 290d6b6b-d822-4f28-bce0-eb6368077a14:
+  name:  Level 2 - Change FTP Port 
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       grep -q "^listen_port=" /etc/vsftpd.conf && \ sed -i 's/^listen_port=.*/listen_port=2121/' /etc/vsftpd.conf || \
+         echo "listen_port=2121" >> /etc/vsftpd.conf && systemctl restart vsftpd
+       
+ 5c565cfb-5aa5-4c3e-9ea6-9e51513ac592:
+  name:  Level 2 - Change WikiJS Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       docker stop ubuntu-wiki-1
+       docker rm ubuntu-wiki-1
+       docker run -d --name ubuntu-wiki-1 -p 8080:3000 requarks/wiki:2.4
+       
+ 7ad9bc1f-0bbf-4aa8-a288-5c7c197f72ec:
+  name:  Level 2 - Change VNC Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1560.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's#\(ExecStart=.*/usr/bin/vncserver :1\)#\1 -rfbport 5999#' /etc/systemd/system/vncserver.service && systemctl daemon-reload && systemctl restart vncserver
+       
+ 67ea5458-a990-431c-960a-e8549ab992b6:
+  name:  Level 2 - Change SSHD Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/^#Port 22/Port 2222/' /etc/ssh/sshd_config
+       systemctl restart sshd
+ 2cdfdad0-af5c-4743-a3f5-2407d0185238:
+  name:  Level 2 - Change Mailserver Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/- "25:25"/- "2525:25"/' /opt/ccso-mailserver/docker-compose.yml
+       sed -i 's/- "143:143"/- "1143:143"/' /opt/ccso-mailserver/docker-compose.yml
+       sed -i 's/- "587:587"/- "1587:587"/' /opt/ccso-mailserver/docker-compose.yml
+       docker compose -f /opt/ccso-mailserver/docker-compose.yml down
+       docker compose -f /opt/ccso-mailserver/docker-compose.yml up -d
+       
+ 79aff7d7-b356-4c49-b114-e7f8f4f8138c:
+  name:  Level 2 - Change MySQL Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1560.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/^port\s*=.*/port            = 3309/' /etc/mysql/mysql.conf.d/mysqld.cnf && systemctl restart mysql
+       
+ efad6ed7-e079-401c-84f9-9b1d9a042cb4:
+  name:  Level 2 - Change Silkroad Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/const PORT = 3000;/const PORT = 69;/' /opt/silkroad/server/server.js && systemctl restart silkroad
+ cb57bf40-c6c4-42fd-813c-31852cd15776:
+  name:  Level 2 - Change Gitea Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/^HTTP_PORT *= *.*/HTTP_PORT = 8085/' /etc/gitea/app.ini || echo -e "[server]\nHTTP_PORT = 8085" >> /etc/gitea/app.ini && systemctl restart gitea
+       
+ 92c42a54-9d41-4c47-8bde-066949c8d9b7:
+  name:  Level 2 - Revoke Read Perms from sqluser
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Indicator Blocking"
+  technique_id:  T1562.006
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       mysql -u root -pPassw0rd123! -e "REVOKE SELECT ON information_schema.* FROM 'sqluser'@'localhost'; FLUSH PRIVILEGES;"
+       
+ 89961056-8cc4-4a1f-8264-3d62dcdd29ec:
+  name:  Level 2 - Change Roundcube Port
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i 's/"8080:80"/"8181:80"/' /opt/ccso-mailserver/docker-compose.yml && docker compose -f /opt/ccso-mailserver/docker-compose.yml down && docker compose -f /opt/ccso-mailserver/docker-compose.yml up -d
+       
+ c18eae13-fe67-42da-bf36-ca898b30163e:
+  name:  Level 3 - DenyUser dreadpirate from SSH 
+  tactic:  defense-evasion
+  technique_name:  "Account Manipulation"
+  technique_id:  T1098
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       grep -q "^DenyUsers" /etc/ssh/sshd_config && sed -i '/^DenyUsers/ s/$/ dreadpirate/' /etc/ssh/sshd_config || echo "DenyUsers dreadpirate" >> /etc/ssh/sshd_config && systemctl restart ssh
+       
+ b5595730-013c-41d0-b54c-75e340a2528a:
+  name:  Level 3 - Change Database Values
+  tactic:  impact
+  technique_name:  "Data Manipulation: Stored Data Manipulation"
+  technique_id:  T1565.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       mysql -u root -pPassw0rd123! -e "USE db; UPDATE products SET name='Sloooow Potion' WHERE name='Speedy Potion';"
+       
+ 44ec784b-73b1-448b-8897-cdf4620f0492:
+  name:  Level 3 - Change SSHD Deny Users
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1562.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       echo "DenyUsers dreadpirate" >> /etc/ssh/sshd_config
+       systemctl restart sshd
+ f0ffd237-8ceb-4e03-a1c7-952e33149096:
+  name:  Level 3 - Replace DNS with barebones copy, Hide backup
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify Tools"
+  technique_id:  T1560.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       cp /etc/bind/zones/db.ccso.org /etc/bind/zones/.db.ccso.org.bak && printf '%s\n' '$TTL 604800' '@    IN    SOA    ns1.ccso.org. admin.ccso.org. (' '         1757130043 ; Serial' '         604800     ; Refresh' '         86400      ; Retry' '         2419200    ; Expire' '         604800 )   ; Negative Cache TTL' '@        IN    NS     ns1.ccso.org.' 'ns1      IN    A      10.12.1.11' '@        IN    TXT   "v=spf1 +all"' > /etc/bind/zones/db.ccso.org && chown bind:bind /etc/bind/zones/db.ccso.org && rndc reload
+       
+ b504f990-698a-4636-a5fe-67f4ce65bb90:
+  name:  Level 4 - Block inbound and Outbound SSH
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Disable or Modify System Firewall"
+  technique_id:  T1562.004
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       iptables -A INPUT -p tcp --dport 22 -j DROP && iptables -A OUTPUT -p tcp --sport 22 -j DROP
+       iptables -A INPUT -p tcp --dport 2222 -j DROP && iptables -A OUTPUT -p tcp --sport 2222 -j DROP
+       
+       
+ 669389f2-55fd-45a4-8edd-843af9d0aaf2:
+  name:  Level 4 - DNS Deny Scorecheck IP 
+  tactic:  defense-evasion
+  technique_name:  "Impair Defenses: Indicator Blocking"
+  technique_id:  T1562.006
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       sed -i '/options {/a \ \ blackhole { 10.0.0.80; };' /etc/bind/named.conf.options && rndc reload
+       
+ 7d23651f-ae00-4469-99e3-84df9b7052ab:
+  name:  Level 4 - Replace Webroot with empty dir
+  tactic:  impact
+  technique_name:  "Data Manipulation: Stored Data Manipulation"
+  technique_id:  T1565.001
+  executors: 
+   - sh:
+     platform: linux
+     command: |
+       cd /opt/silkroad/server && zip -r /opt/silkroad/public-backup.zip public && rm -rf public && mkdir -p public && systemctl restart silkroad
+       
